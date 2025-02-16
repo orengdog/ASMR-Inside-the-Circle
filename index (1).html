@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASMR Inside the Circle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">ASMR Inside the Circle</h1>
+        <button id="startButton">Start Simulation</button>
+        <canvas id="canvas"></canvas>
+        <div class="controls">
+            <label>
+                <input type="checkbox" id="growOnCollision">
+                Grow on Collision
+            </label>
+            <label>
+                <input type="checkbox" id="shrinkOnCollision">
+                Shrink on Collision
+            </label>
+            <label>
+                Multiply Balls on Collision:
+                <input type="number" id="multiplyOnCollision" value="0" min="0">
+            </label>
+            <label>
+                <input type="checkbox" id="smallSpace">
+                Enable Small Space in Circle
+            </label>
+            <label>
+                <input type="checkbox" id="rotateCircle">
+                Rotate Circle
+            </label>
+            <label>
+                <input type="checkbox" id="changeColorOnCollision">
+                Change Color on Collision
+            </label>
+            <label>
+                Number of Circle Layers:
+                <input type="number" id="circleLayers" value="1" min="1">
+            </label>
+            <label>
+                Audio URL:
+                <input type="text" id="audioUrl" placeholder="Enter audio URL">
+            </label>
+            <label>
+                Upload Audio:
+                <input type="file" id="audioFile" accept="audio/*">
+            </label>
+            <label>
+                Repulsion Force:
+                <input type="number" id="repulsionForce" value="10" min="10">
+            </label>
+            <label>
+                <input type="checkbox" id="changeSpeedOnCollision">
+                Change Speed on Collision
+            </label>
+            <button id="toggleTheme">Toggle Theme</button>
+            <button id="toggleLanguage">Change Language</button>
+            <div id="languageSelector" class="hidden">
+                <button data-lang="en">English</button>
+                <button data-lang="ru">Русский</button>
+                <button data-lang="zh">中文</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Note Options</button>
+                <div class="dropdown-content">
+                    <button data-note="same">Same Note</button>
+                    <button data-note="increase">Increase Note</button>
+                    <button data-note="decrease">Decrease Note</button>
+                </div>
+            </div>
+        </div>
+        <button id="restartButton" class="hidden">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
